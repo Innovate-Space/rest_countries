@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '', 
     component : MainComponent,
     children: [
-      {path: 'country_detail', component: CountryDetailComponent },
+      {path: 'country_detail/:id', component: CountryDetailComponent },
       {path: '',component: CountryListComponent }
     ]
   

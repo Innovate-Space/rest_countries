@@ -5,8 +5,8 @@
 </div>
 <ul *ngIf="!isLoading">
     <li *ngFor="let country of countryList;">
-       <a routerLink="/country_detail">
-            <img src={{country.flags.svg}} alt={{country.name.common}}>
+       <a [routerLink]="['/country_detail', country.name.common]">
+            <img width="120"  src={{country.flags.svg}} alt={{country.name.common}}>
             <p>{{country.name.common}}</p>
             <p>Region: {{country.region}} - Population: {{country.population}}</p>
             <p>Capital: {{country.capital}}</p>
